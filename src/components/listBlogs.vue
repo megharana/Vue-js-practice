@@ -1,18 +1,18 @@
 <template>
-  <div v-width:column="'narrow'" id ="show-blogs">
+  <div v-width:column="'narrow'" id ="list-blogs">
 
     <h1>All Blog Articles</h1>
     <input type="text" v-model="search" placeholder="search blog"/>
     <div v-rainbow="" v-for="blog in filteredBlog" class="single-blog">
       <h2>{{blog.title|to-uppercase}}</h2>
-      <article>{{blog.body|snippet}}</article>
+
     </div>
   </div>
 </template>
 <script>
 
-
 import searchMixins from '../mixins/searchMixins'; 
+
 
 export default {
 
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style >
-#show-blogs{
+#list-blogs{
     max-width: 800px;
     margin: 0px auto;
 }
